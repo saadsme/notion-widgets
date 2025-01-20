@@ -1,27 +1,29 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Router } from "next/router";
 
 type TikTokFormProps = {
-  onSubmit: (username: string, apiKey?: string) => void
-}
+  onSubmit: (username: string, apiKey?: string) => void;
+};
 
 export function TiktokForm({ onSubmit }: TikTokFormProps) {
-  const [username, setUsername] = useState('')
-  const [apiKey, setApiKey] = useState('')
-  const [isPaidTier, setIsPaidTier] = useState(false)
-
+  const [username, setUsername] = useState("");
+  const [apiKey, setApiKey] = useState("");
+  const [isPaidTier, setIsPaidTier] = useState(false);
+  const router = Router;
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    onSubmit(username, isPaidTier ? undefined : apiKey)
-  }
+    e.preventDefault();
+    onSubmit(username, isPaidTier ? undefined : apiKey);
+    //create a hash and show the link to the user and they can paste them to the notion board
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 p-8">
       <div>
         <Label htmlFor="username">TikTok Username</Label>
         <Input
@@ -52,5 +54,5 @@ export function TiktokForm({ onSubmit }: TikTokFormProps) {
       )}
       <Button type="submit">Generate Widget</Button>
     </form>
-  )
+  );
 }

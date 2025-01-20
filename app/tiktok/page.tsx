@@ -1,12 +1,12 @@
-import { TiktokWidget } from '@/components/tiktok-widget'
-import React from 'react'
+import { TiktokWidget } from "@/components/tiktok-widget";
+import React from "react";
 
 const Tiktok = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full h-screen'>
-      <TiktokWidget/>
+    <div className="flex flex-col items-center justify-center w-full">
+      <TiktokWidget />
     </div>
-  )
-}
+  );
+};
 
-export default Tiktok
+export default Tiktok;
