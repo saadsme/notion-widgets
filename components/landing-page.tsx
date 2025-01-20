@@ -63,7 +63,7 @@ export function LandingPageComponent() {
                   <CardTitle className="text-blue-600 dark:text-blue-400">Customizable</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  Tailor widgets to match your Notion page's style and functionality needs.
+                  Tailor widgets to match your Notion pages style and functionality needs.
                 </CardContent>
               </Card>
               <Card className="bg-blue-50 dark:bg-gray-700">
@@ -95,7 +95,7 @@ export function LandingPageComponent() {
               <div className="flex flex-col items-center text-center">
                 <div className="rounded-full bg-blue-600 text-white w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">3</div>
                 <h3 className="text-xl font-bold mb-2 text-blue-600 dark:text-blue-400">Embed in Notion</h3>
-                <p className="text-gray-600 dark:text-gray-300">Copy the generated embed code and paste it into your Notion page. It's that simple!</p>
+                <p className="text-gray-600 dark:text-gray-300">Copy the generated embed code and paste it into your Notion page. Its that simple!</p>
               </div>
             </div>
           </div>
